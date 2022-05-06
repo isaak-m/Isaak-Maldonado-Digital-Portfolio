@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isaak Maldonado | Contact</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
@@ -29,6 +30,13 @@
         </nav>
     </header>
     <main>
+        <form name="validationForm" id="validationForm" onsubmit="validatePhoneEmail()">
+            <input type="text" size="30" name="name" placeholder="First and Lastname"/> 
+            <input type="text" size="30" name="email_address" placeholder="Email address"/> 
+            <input type="text" size="30" name="phone_number" placeholder="Phone number">
+            <input type="text" size="30" name="message" placeholder="Message">
+            <input type="submit" name="submit" onclick="validatePhoneEmail()">
+        </form>
         <!--Img of business card-->
         <img src="imgs\frontBusiness.jpg" alt="Front of business card">
         <img src="imgs\backBusiness.jpg" alt="Back of business card">
