@@ -1,18 +1,29 @@
-.topNav a {
-    text-decoration: none;
-    padding: 1%;
-    color: white;
-    font-size: 100%;
+body {
+    overflow-x: hidden;
+    width: 100%;
 }
-.topNav a:hover{
-    text-decoration: underline;
-    background-color: #bababa;
+header {
+    padding: 0%;
 }
 .topNav {
     display: flex;
     flex-direction: row;
     background-color: #67819A;
     justify-content: right;
+    width: 100%;
+    top: 0;
+}
+.topNav a {
+    text-decoration: none;
+    padding: 1%;
+    color: white;
+    font-size: 100%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.topNav a:hover{
+    text-decoration: underline;
+    background-color: #bababa;
 }
 .dropP {
     color: white;
@@ -20,12 +31,12 @@
     border: none;
     background-color: transparent;
 }
-.dropdown {
+.dropDown {
     padding: 1%;
     background-color: #67819A;
     color: white;
 }
-.dropdown:hover {
+.dropDown:hover {
     background-color: #bababa;
 }
 .dropDownContent {
@@ -35,6 +46,7 @@
     min-width: 160px;
     z-index: 1;
     padding: 1%;
+    transform: translateY(6%);
 }
 .dropDownContent a {
     color: black;
@@ -46,6 +58,45 @@
 .dropDownContent a:hover {
     background-color: #67819A;
 }
-.dropdown:hover .dropDownContent{
+.dropDown:hover .dropDownContent{
     display: block;
+}
+main {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+#carousel {
+    display: flex;
+    flex-direction: row;
+}
+img {
+    max-width: 50%;
+    object-fit: contain;
+}
+footer {
+    width: 100%;
+    background-color: #67819A;
+    bottom: 0;
+    padding: 1%;
+    position: relative;
+}
+footer a {
+    color: white;
+    text-decoration: none;
+    padding: 1%;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+/*Large Tablet*/
+@media screen and (max-width:992px) {
+    
+}
+/*Medium Tablet*/
+@media screen and (max-width:992px) {
+    
+}
+/*Mobile*/
+@media screen and (max-width:992px) {
+    
 }
