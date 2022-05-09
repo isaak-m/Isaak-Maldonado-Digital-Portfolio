@@ -4,14 +4,16 @@ body {
 }
 header {
     padding: 0%;
+    margin: 0%;
 }
 .topNav {
     display: flex;
     flex-direction: row;
     background-color: #67819A;
     justify-content: right;
-    width: 100%;
+    width: 100vw;
     top: 0;
+    position: absolute;
 }
 .topNav a {
     text-decoration: none;
@@ -39,6 +41,9 @@ header {
 .dropDown:hover {
     background-color: #bababa;
 }
+.dropDown button:hover {
+    text-decoration: underline;
+}
 .dropDownContent {
     display: none;
     position: absolute;
@@ -46,7 +51,6 @@ header {
     min-width: 160px;
     z-index: 1;
     padding: 1%;
-    transform: translateY(6%);
 }
 .dropDownContent a {
     color: black;
@@ -60,6 +64,17 @@ header {
 }
 .dropDown:hover .dropDownContent{
     display: block;
+}
+.active {
+    text-decoration: underline;
+}
+.burger {
+    display: none;
+    cursor: pointer;
+}
+.pageLinks {
+    display: flex;
+    flex-direction: row;
 }
 main {
     margin-left: 5%;
@@ -88,15 +103,40 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
 /*Large Tablet*/
 @media screen and (max-width:992px) {
     
 }
 /*Medium Tablet*/
-@media screen and (max-width:992px) {
+@media screen and (max-width:768px) {
+    .topNav{
+        flex-direction: column;
+    }
+    .topBar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .pageLinks{
+        display: none;
+
+    }
+    .burger {
+        display: block;
+        z-index: 3;
+
+    }
+    .burger div {
+        width: 20px;
+        height: 5px;
+        background-color: black;
+        margin: 5px;
+    }
+
     
 }
 /*Mobile*/
-@media screen and (max-width:992px) {
+@media screen and (max-width:480px) {
     
 }

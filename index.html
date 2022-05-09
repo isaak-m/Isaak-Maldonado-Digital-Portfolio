@@ -11,23 +11,36 @@
 <body>
     <header>
         <nav class="topNav">
-            <a class="active" href="index.html">Home</a>
-            <a href="aboutMe.html">About Me</a>
-            <a href="resume.html">Resume</a>
-            <div class="dropDown">
-                <a class="dropP">Portfolio</a>
-                <div class="dropDownContent">
-                    <a href="aboutSpark.html">Adobe Spark</a>
-                    <a href="chronoshift.html">Chronoshift Expeditions</a>
-                    <a href="photoshop.html">Adobe Photoshop</a>
-                    <a href="tourism.html">Tourism Website</a>
-                    <a href="paranova.html">Interactive Story: Paranova</a>
-                    <a href="escapism.html"><i>Ready Player One</i>: Escapism</a>
-                    <a href="literaryResponse.html">Literary Response</a>
+            <div class="topBar"><!--maybe use this to try to make the burger align to the right and home to the left then click burger to make things flow nicely-->
+                <a  id="home" class="active" href="index.html">Home</a>
+                <div class="burger" onclick="burgerMenu()">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
                 </div>
             </div>
-            <a href="contact.html">Contact</a>
+            
+            <div id="pageLinks">
+                <a href="aboutMe.html">About Me</a>
+                <a href="resume.html">Resume</a>
+                <div class="portfolio">
+                    <div class="dropDown">
+                        <button>Portfolio</button>
+                        <div class="dropDownContent">
+                            <a href="aboutSpark.html">Adobe Spark</a>
+                            <a href="chronoshift.html">Chronoshift Expeditions</a>
+                            <a href="photoshop.html">Adobe Photoshop</a>
+                            <a href="tourism.html">Tourism Website</a>
+                            <a href="paranova.html">Interactive Story: Paranova</a>
+                            <a href="escapism.html"><i>Ready Player One</i>: Escapism</a>
+                            <a href="literaryResponse.html">Literary Response</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="contact.html">Contact</a>
+            </div>
         </nav>
+
     </header>
     <main>
         <!--image carrousel-->
