@@ -36,10 +36,21 @@ function validatePhoneEmail() {
 }
 //burger idea
 function burgerMenu() {//MAYBE TRY TO WRITE THE CSS FOR THE DROPDOWNCONTENT TO WORK PROPERLY
-    let pageLink = document.getElementsByClassName('pageLink');
-    if (pageLink.style.display === 'block') {
-        pageLink.style.display = 'none';
+    let fullPageLinks = document.getElementById('fullPageLinks');
+    if (fullPageLinks.style.display === 'flex') {
+        fullPageLinks.style.display = 'none';
     } else {
-        pageLink.style.display = 'block';
+        fullPageLinks.style.display = 'flex';
+        fullPageLinks.style.flexDirection = 'column';
     }
 }
+// function dropDown() {
+//     document.getElementsByClassName('portfolioHover').addEventListener('mouseover', mouseOver);
+//     document.getElementsByClassName('portfolioHover').addEventListener('mouseout', mouseOut);
+//     function mouseOver() {
+//         document.getElementsByClassName('portfolioLink').style.display = 'block'
+//     }
+//     function mouseOut() {
+//         document.getElementsByClassName('portfolioLink').style.display = 'none'
+//     }
+// }

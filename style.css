@@ -1,6 +1,7 @@
 body {
     overflow-x: hidden;
     width: 100%;
+    margin: 0%;
 }
 header {
     padding: 0%;
@@ -10,16 +11,16 @@ header {
     display: flex;
     flex-direction: row;
     background-color: #67819A;
-    justify-content: right;
+    justify-content: left;
     width: 100vw;
     top: 0;
-    flex-wrap: wrap;
+    padding-left: 3%;
 }
 .topNav a {
     text-decoration: none;
     padding: 1%;
     color: white;
-    font-size: 100%;
+    font-size: large;
     padding-left: 2%;
     padding-right: 2%;
 }
@@ -27,22 +28,41 @@ header {
     text-decoration: underline;
     background-color: #bababa;
 }
-.portfolioLink {
-    display: none;
-}
-.portfolioBtn:hover .portfolioLink {
-    display: block;
-    position: absolute;
-}
-.active {
-    text-decoration: underline;
+#home {
+    text-align: center;
 }
 #burger {
     display: none;
-    cursor: pointer;
+    cursor: context-menu;
+}
+#fullPageLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 40%;
+    padding-left: 15%;
+    position: fixed;
 }
 .pageLink {
+    text-align: center;
     display: block;
+}
+.portfolioHover:hover + .portfolioLinks {
+    display: flex;
+    flex-direction: column;
+    background-color: #67819A;
+    height: fit-content;
+
+}
+.portfolioLinks {
+    display: none;
+    height: fit-content;
+}
+.portfolioHover:hover {
+    display: none;
+}
+.active {
+    text-decoration: underline;
 }
 main {
     margin-left: 5%;
@@ -57,11 +77,12 @@ img {
     object-fit: contain;
 }
 footer {
-    width: 100%;
+    width: 100vw;
     background-color: #67819A;
     bottom: 0;
     padding: 1%;
     position: relative;
+    margin-bottom: 0vh;
 }
 footer a {
     color: white;
@@ -80,20 +101,26 @@ footer a:hover {
 @media screen and (max-width:768px) {
     .topNav{
         flex-direction: column;
+        justify-content: right;
+        padding-left: 0%;
     }
     .topBar{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
-    .pageLink{
+    #fullPageLinks{
         display: none;
-
+        height: fit-content;
+        padding-left: 1%;
+        background-color: #67819A;
+        margin-top: 4%;
+        width: 100%;
     }
     #burger {
         display: block;
         z-index: 3;
-
+        cursor: pointer;
     }
     #burger div {
         width: 20px;
@@ -101,8 +128,17 @@ footer a:hover {
         background-color: black;
         margin: 5px;
     }
-
-    
+    .pageLink {
+        display: block;
+        text-align: left;
+    }
+    .portfolioLinks {
+        display: flex;
+        flex-direction: column;
+    }
+    .portfolioHover {
+        display: none;
+    }
 }
 /*Mobile*/
 @media screen and (max-width:480px) {
