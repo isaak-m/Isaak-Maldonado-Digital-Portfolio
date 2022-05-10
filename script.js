@@ -36,12 +36,10 @@ function validatePhoneEmail() {
 }
 //burger idea
 function burgerMenu() {//MAYBE TRY TO WRITE THE CSS FOR THE DROPDOWNCONTENT TO WORK PROPERLY
-    let pageLinks = document.getElementById('pageLinks');
-    if (pageLinks.style.display === 'flex') {
-        pageLinks.style.display = 'none';
+    let pageLink = document.getElementsByClassName('pageLink');
+    if (pageLink.style.display === 'block') {
+        pageLink.style.display = 'none';
     } else {
-        pageLinks.style.display = 'flex';
-        pageLinks.style.flexDirection = 'column'
-
+        pageLink.style.display = 'block';
     }
 }
