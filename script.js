@@ -34,23 +34,13 @@ function validatePhoneEmail() {
     console.log(phoneTest());
     console.log(emailTest());
 }
-//burger idea
-function burgerMenu() {//MAYBE TRY TO WRITE THE CSS FOR THE DROPDOWNCONTENT TO WORK PROPERLY
-    let fullPageLinks = document.getElementById('fullPageLinks');
-    if (fullPageLinks.style.display === 'flex') {
+//burger
+function burgerMenu() {
+    let fullPageLinks = document.getElementById('fullPageLinks');//makes variable set to the same name as it is in the HTML
+    if (fullPageLinks.style.display === 'flex') {//if the user has clicked the burger then it checks if the 'fullPageLinks' div is in displayed or not and if it is then it stops diplaying and if it's not then it does display
         fullPageLinks.style.display = 'none';
     } else {
-        fullPageLinks.style.display = 'flex';
+        fullPageLinks.style.display = 'flex';//styling for the look and functionality of the page links
         fullPageLinks.style.flexDirection = 'column';
     }
 }
-// function dropDown() {
-//     document.getElementsByClassName('portfolioHover').addEventListener('mouseover', mouseOver);
-//     document.getElementsByClassName('portfolioHover').addEventListener('mouseout', mouseOut);
-//     function mouseOver() {
-//         document.getElementsByClassName('portfolioLink').style.display = 'block'
-//     }
-//     function mouseOut() {
-//         document.getElementsByClassName('portfolioLink').style.display = 'none'
-//     }
-// }

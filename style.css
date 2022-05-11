@@ -1,3 +1,6 @@
+html {
+    overflow-x: hidden;
+}
 body {
     overflow-x: hidden;
     width: 100%;
@@ -46,19 +49,34 @@ header {
 .pageLink {
     text-align: center;
     display: block;
+    color: white;
 }
-.portfolioHover:hover + .portfolioLinks {
+.portfolioHover {
+    background-color: #67819A;
+    border: 0px;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    height: auto;
+}
+.dropDown:hover .portfolioLinksDP {
     display: flex;
     flex-direction: column;
     background-color: #67819A;
     height: fit-content;
-
 }
-.portfolioLinks {
+.portfolioLinksDP {
     display: none;
     height: fit-content;
+    background-color: #67819A;
+}
+.portfolioLinksDP:hover {
+    display: block;
 }
 .portfolioHover:hover {
+    display: none;
+}
+
+.portfolioLinks {
     display: none;
 }
 .active {
@@ -73,7 +91,8 @@ main {
     flex-direction: row;
 }
 img {
-    max-width: 50%;
+    width: 50vw;
+    height: 30vh;
     object-fit: contain;
 }
 footer {
@@ -92,10 +111,16 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
-
+.footerText {
+    color: white;
+    font-size: small;
+    padding-left: 1%;
+}
 /*Large Tablet*/
 @media screen and (max-width:992px) {
-    
+    p {
+        font-size: larger;
+    }
 }
 /*Medium Tablet*/
 @media screen and (max-width:768px) {
@@ -103,6 +128,7 @@ footer a:hover {
         flex-direction: column;
         justify-content: right;
         padding-left: 0%;
+        position: sticky;
     }
     .topBar{
         display: flex;
@@ -114,7 +140,6 @@ footer a:hover {
         height: fit-content;
         padding-left: 1%;
         background-color: #67819A;
-        margin-top: 4%;
         width: 100%;
     }
     #burger {
@@ -128,6 +153,9 @@ footer a:hover {
         background-color: black;
         margin: 5px;
     }
+    .dropDown {
+        display: none;
+    }
     .pageLink {
         display: block;
         text-align: left;
@@ -139,8 +167,21 @@ footer a:hover {
     .portfolioHover {
         display: none;
     }
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 /*Mobile*/
 @media screen and (max-width:480px) {
-    
+    .topNav {
+        font-size: x-large;
+    }
+    p {
+        font-size: x-large;
+    }
+    footer {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
 }
