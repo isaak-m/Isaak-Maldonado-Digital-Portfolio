@@ -13,11 +13,11 @@ header {
 .topNav {
     display: flex;
     flex-direction: row;
-    background-color: #67819A;
     justify-content: left;
     width: 100vw;
     top: 0;
     padding-left: 3%;
+    background-color: #67819A;
 }
 .topNav a {
     text-decoration: none;
@@ -31,6 +31,9 @@ header {
     text-decoration: underline;
     background-color: #bababa;
 }
+.topBar {
+    background-color: #67819A;
+}
 #home {
     text-align: center;
 }
@@ -43,13 +46,16 @@ header {
     flex-direction: row;
     justify-content: space-between;
     width: 40%;
-    padding-left: 15%;
-    position: fixed;
+    padding-left: 5%;
+    height: 8%;
 }
 .pageLink {
     text-align: center;
-    display: block;
     color: white;
+    display: block;
+}
+.dropDown{
+    width: fit-content;
 }
 .portfolioHover {
     background-color: #67819A;
@@ -67,15 +73,10 @@ header {
 .portfolioLinksDP {
     display: none;
     height: fit-content;
-    background-color: #67819A;
 }
 .portfolioLinksDP:hover {
-    display: block;
+    display: flex;
 }
-.portfolioHover:hover {
-    display: none;
-}
-
 .portfolioLinks {
     display: none;
 }
@@ -94,6 +95,16 @@ img {
     width: 50vw;
     height: 30vh;
     object-fit: contain;
+}
+.topResume {
+    display: flex;
+    justify-content: space-between;
+}
+.topResumeLeft {
+    flex-direction: column;
+}
+.topResumeRight{
+    flex-direction: column;
 }
 footer {
     width: 100vw;
@@ -128,7 +139,6 @@ footer a:hover {
         flex-direction: column;
         justify-content: right;
         padding-left: 0%;
-        position: sticky;
     }
     .topBar{
         display: flex;
@@ -167,6 +177,21 @@ footer a:hover {
     .portfolioHover {
         display: none;
     }
+    .topResume h3{
+        font-size: larger;
+    }
+    article ul{
+        font-size: larger;
+    }
+    article h3 {
+        font-size: larger;
+    }
+    article b {
+        font-size: larger;
+    }
+    article p {
+        font-size: large;
+    }
     footer {
         display: flex;
         flex-wrap: wrap;
@@ -178,6 +203,15 @@ footer a:hover {
         font-size: x-large;
     }
     p {
+        font-size: x-large;
+    }
+    article ul{
+        font-size: x-large;
+    }
+    article h3 {
+        font-size: x-large;
+    }
+    article b {
         font-size: x-large;
     }
     footer {
