@@ -46,14 +46,14 @@
                 <a class="pageLink" href="contact.html">Contact</a>
             </div>
         </nav>
-    </header>
+    </header> 
     <main>
-        <form name="validationForm" id="validationForm" onsubmit="validatePhoneEmail()">
-            <input type="text" size="30" name="name" placeholder="First and Lastname"/> 
-            <input type="text" size="30" name="email_address" placeholder="Email address"/> 
-            <input type="text" size="30" name="phone_number" placeholder="Phone number">
-            <input type="text" size="30" name="message" placeholder="Message">
-            <input onclick="validatePhoneEmail()" type="submit" name="submit">
+        <form name="validationForm" id="validationForm" onsubmit="return formValidation()">
+            <input type="text" size="30" name="name" placeholder="First and Lastname" required> 
+            <input type="text" size="30" name="emailAddress" placeholder="Email address" required> 
+            <input type="tel" size="30" name="phoneNumber" placeholder="Phone number" required>
+            <input type="text" size="30" name="message" placeholder="Message" required>
+            <input type="submit" name="submit">
         </form>
         <!--Img of business card-->
         <img src="imgs\frontBusiness.jpg" alt="Front of business card">
@@ -61,7 +61,6 @@
         <!--Text of various contact methods-->
         <p>To keep up to date with me or to contact me, contact me at:
             <ul>
-                <li>Isaak Maldonado</li>
                 <li>Email: i.z.maldonado.2051@gmail.com</li>
                 <li>Phone: (559) 231-7451</li>
                 <li>Location: Fresno, CA</li>
