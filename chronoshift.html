@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
-<body>
+<body onload="current(1)">
     <header>
         <nav class="topNav">
             <div class="topBar"><!--maybe use this to try to make the burger align to the right and home to the left then click burger to make things flow nicely-->
-                <a id="home" class="active" href="index.html">Isaak Maldonado</a>
+                <a id="home" href="index.html">Isaak Maldonado</a>
                 <div id="burger" onclick="burgerMenu()">
                     <div class="line1"></div>
                     <div class="line2"></div>
@@ -26,7 +26,7 @@
                     <button class="pageLink portfolioHover">Portfolio</button>
                     <div class="portfolioLinksDP">
                         <a class="pageLink portfolioLink" href="aboutSpark.html">Adobe Spark</a>
-                        <a class="pageLink portfolioLink" href="chronoshift.html">Chronoshift Expeditions</a>
+                        <a class="pageLink portfolioLink activeLink" href="chronoshift.html">Chronoshift Expeditions</a>
                         <a class="pageLink portfolioLink" href="photoshop.html">Adobe Photoshop</a>
                         <a class="pageLink portfolioLink" href="tourism.html">Tourism Website</a>
                         <a class="pageLink portfolioLink" href="paranova.html">Interactive Story: Paranova</a>
@@ -36,7 +36,7 @@
                 </div>
                 <div class="portfolioLinks">
                     <a class="pageLink portfolioLink" href="aboutSpark.html">Adobe Spark</a>
-                    <a class="pageLink portfolioLink" href="chronoshift.html">Chronoshift Expeditions</a>
+                    <a class="pageLink portfolioLink activeLink" href="chronoshift.html">Chronoshift Expeditions</a>
                     <a class="pageLink portfolioLink" href="photoshop.html">Adobe Photoshop</a>
                     <a class="pageLink portfolioLink" href="tourism.html">Tourism Website</a>
                     <a class="pageLink portfolioLink" href="paranova.html">Interactive Story: Paranova</a>
@@ -49,11 +49,45 @@
     </header>
     <main>
         <!--image carrousel-->
-        <div id="carousel">
-
+        <div class="fullCarousel">
+            <div class="carousel fade">
+                <div class="card">
+                    <a href="https://relaxed-wright-fb2d49.netlify.app/" target="_blank"><img src="imgs/chronoshiftSnip.PNG" alt="Chronoshift Expeditions"></a>
+                    <div class="caption">Chronoshift Home Page</div>
+                </div>
+                <div class="card">
+                    <a href="https://relaxed-wright-fb2d49.netlify.app/" target="_blank"><img src="imgs/chronoshiftSnip2.PNG" alt="Chronoshift Expeditions Page"></a>
+                    <div class="caption">Chronoshift Expeditions Page</div>
+                </div>
+                <div class="card">
+                    <a href="https://relaxed-wright-fb2d49.netlify.app/" target="_blank"><img src="imgs/chronoshiftSnip3.PNG" alt="Chronoshift About Page"></a>
+                    <div class="caption">Chronoshift About Page</div>
+                </div>
+                <div class="card">
+                    <img src="" alt="Chronoshift Visual Studio Code">
+                    <div class="caption">Chronoshift Visual Studio Code</div>
+                </div>
+                <div class="card">
+                    <img src="" alt="Chronoshift Adobe Photoshop">
+                    <div class="caption">Chronoshift Adobe Photoshop</div>
+                </div>
+                <div class="card">
+                    <a href="https://github.com/isaak-m/chronoshift" target="_blank"><img src="imgs/chronoshiftGit.png" alt="Chronoshift Expeditions GitHub"></a>
+                    <div class="caption">Chronoshift Expeditions GitHub</div>
+                </div>
+                <a class="backward" onclick="add(-1)">&#10094;</a>
+                <a class="forward" onclick="add(1)">&#10095;</a>
+            </div>
+            <div style="text-align:center">
+                <span class="circle" onclick="current(1)"></span>
+                <span class="circle" onclick="current(2)"></span>
+                <span class="circle" onclick="current(3)"></span>
+                <span class="circle" onclick="current(4)"></span>
+                <span class="circle" onclick="current(5)"></span>
+                <span class="circle" onclick="current(6)"></span>
+            </div>
         </div>
         <h6>Click images to open site</h6>
-        <a href="https://relaxed-wright-fb2d49.netlify.app/" target="_blank"><img src="imgs/chronoshiftSnip.PNG" alt="Chronoshift Expeditions"></a>
         <!--Text-->
         <p>
             &emsp;&nbsp;For the Chronoshift Expeditions website, one of the main things that I learned more about and gained more knowledge on was programming CSS. The Chronoshift Expeditions website had information about different time periods that someone can enter for a traveling fee. The site was created based on Ray Bradbury's “A Sound of Thunder” where someone can buy a ticket to time travel to a certain time period.<br><br>
@@ -63,11 +97,11 @@
         </p>
     </main>
     <footer>
-        <a class="active" href="index.html">Isaak Maldonado</a>
+        <a href="index.html">Isaak Maldonado</a>
         <a href="aboutMe.html">About Me</a>
         <a href="resume.html">Resume</a>
         <a href="aboutSpark.html">Adobe Spark</a>
-        <a href="chronoshift.html">Chronoshift Expeditions</a>
+        <a class="activeLink" href="chronoshift.html">Chronoshift Expeditions</a>
         <a href="photoshop.html">Adobe Photoshop</a>
         <a href="tourism.html">Tourism Website</a>
         <a href="paranova.html">Interactive Story: Paranova</a>

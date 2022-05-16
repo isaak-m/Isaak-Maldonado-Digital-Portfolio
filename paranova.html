@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
-<body>
+<body onload="current(1)">
     <header>
         <nav class="topNav">
             <div class="topBar"><!--maybe use this to try to make the burger align to the right and home to the left then click burger to make things flow nicely-->
-                <a id="home" class="active" href="index.html">Isaak Maldonado</a>
+                <a id="home" href="index.html">Isaak Maldonado</a>
                 <div id="burger" onclick="burgerMenu()">
                     <div class="line1"></div>
                     <div class="line2"></div>
@@ -29,7 +29,7 @@
                         <a class="pageLink portfolioLink" href="chronoshift.html">Chronoshift Expeditions</a>
                         <a class="pageLink portfolioLink" href="photoshop.html">Adobe Photoshop</a>
                         <a class="pageLink portfolioLink" href="tourism.html">Tourism Website</a>
-                        <a class="pageLink portfolioLink" href="paranova.html">Interactive Story: Paranova</a>
+                        <a class="pageLink portfolioLink activeLink" href="paranova.html">Interactive Story: Paranova</a>
                         <a class="pageLink portfolioLink" href="escapism.html"><i>Ready Player One</i>: Escapism</a>
                         <a class="pageLink portfolioLink" href="literaryResponse.html">Literary Response</a>
                     </div>
@@ -39,7 +39,7 @@
                     <a class="pageLink portfolioLink" href="chronoshift.html">Chronoshift Expeditions</a>
                     <a class="pageLink portfolioLink" href="photoshop.html">Adobe Photoshop</a>
                     <a class="pageLink portfolioLink" href="tourism.html">Tourism Website</a>
-                    <a class="pageLink portfolioLink" href="paranova.html">Interactive Story: Paranova</a>
+                    <a class="pageLink portfolioLink activeLink" href="paranova.html">Interactive Story: Paranova</a>
                     <a class="pageLink portfolioLink" href="escapism.html"><i>Ready Player One</i>: Escapism</a>
                     <a class="pageLink portfolioLink" href="literaryResponse.html">Literary Response</a>
                 </div>
@@ -49,11 +49,35 @@
     </header>
     <main>
         <!--image carrousel-->
-        <div id="carousel">
-
+        <div class="fullCarousel">
+            <div class="carousel fade">
+                <div class="card">
+                    <a href="https://paranova.netlify.app/" target="_blank"><img src="imgs/paranovaSnip.PNG" alt="Interactive Story"></a>
+                    <div class="caption">Paranova</div>
+                </div>
+                <div class="card">
+                    <a href="https://github.com/DanielHill2005/paranova" target="_blank"><img src="imgs/paranovaGit.png" alt="Interactive Story: Paranova GitHub"></a>
+                    <div class="caption">Interactive Story: Paranova GitHub</div>
+                </div>
+                <div class="card">
+                    <img src="" alt="Paranova Visual Studio Code">
+                    <div class="caption">Paranova Visual Studio Code</div>
+                </div>
+                <div class="card">
+                    <img src="" alt="Paranova Photoshop">
+                    <div class="caption">Paranova Photoshop</div>
+                </div>
+                <a class="backward" onclick="add(-1)">&#10094;</a>
+                <a class="forward" onclick="add(1)">&#10095;</a>
+            </div>
+            <div style="text-align:center">
+                <span class="circle" onclick="current(1)"></span>
+                <span class="circle" onclick="current(2)"></span>
+                <span class="circle" onclick="current(3)"></span>
+                <span class="circle" onclick="current(4)"></span>
+            </div>
         </div>
         <h6>Click images to open site</h6>
-        <a href="https://paranova.netlify.app/" target="_blank"><img src="imgs/paranovaSnip.PNG" alt="Interactive Story"></a>
         <!--Text-->
         <p>
             &emsp;&nbsp;My partner, Daniel Hill, and I were tasked with writing and coding an interactive story that we called “Paranova”. The story is a sci-fi story that takes place way in the future where the player is meant to maneuver through the story by making choices that would lead them through different paths and scenarios, ultimately giving them a different ending.<br><br>
@@ -63,14 +87,14 @@
         </p>
     </main>
     <footer>
-        <a class="active" href="index.html">Isaak Maldonado</a>
+        <a href="index.html">Isaak Maldonado</a>
         <a href="aboutMe.html">About Me</a>
         <a href="resume.html">Resume</a>
         <a href="aboutSpark.html">Adobe Spark</a>
         <a href="chronoshift.html">Chronoshift Expeditions</a>
         <a href="photoshop.html">Adobe Photoshop</a>
         <a href="tourism.html">Tourism Website</a>
-        <a href="paranova.html">Interactive Story: Paranova</a>
+        <a class="activeLink" href="paranova.html">Interactive Story: Paranova</a>
         <a href="escapism.html"><i>Ready Player One</i>: Escapism</a>
         <a href="literaryResponse.html">Literary Response</a>
         <a href="contact.html">Contact</a>

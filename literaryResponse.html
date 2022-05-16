@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
-<body>
+<body onload="current(1)">
     <header>
         <nav class="topNav">
             <div class="topBar"><!--maybe use this to try to make the burger align to the right and home to the left then click burger to make things flow nicely-->
-                <a id="home" class="active" href="index.html">Isaak Maldonado</a>
+                <a id="home" href="index.html">Isaak Maldonado</a>
                 <div id="burger" onclick="burgerMenu()">
                     <div class="line1"></div>
                     <div class="line2"></div>
@@ -31,7 +31,7 @@
                         <a class="pageLink portfolioLink" href="tourism.html">Tourism Website</a>
                         <a class="pageLink portfolioLink" href="paranova.html">Interactive Story: Paranova</a>
                         <a class="pageLink portfolioLink" href="escapism.html"><i>Ready Player One</i>: Escapism</a>
-                        <a class="pageLink portfolioLink" href="literaryResponse.html">Literary Response</a>
+                        <a class="pageLink portfolioLink activeLink" href="literaryResponse.html">Literary Response</a>
                     </div>
                 </div>
                 <div class="portfolioLinks">
@@ -41,7 +41,7 @@
                     <a class="pageLink portfolioLink" href="tourism.html">Tourism Website</a>
                     <a class="pageLink portfolioLink" href="paranova.html">Interactive Story: Paranova</a>
                     <a class="pageLink portfolioLink" href="escapism.html"><i>Ready Player One</i>: Escapism</a>
-                    <a class="pageLink portfolioLink" href="literaryResponse.html">Literary Response</a>
+                    <a class="pageLink portfolioLink activeLink" href="literaryResponse.html">Literary Response</a>
                 </div>
                 <a class="pageLink" href="contact.html">Contact</a>
             </div>
@@ -49,11 +49,30 @@
     </header>
     <main>
         <!--image carrousel-->
-        <div id="carousel">
-
+        <div class="fullCarousel">
+            <div class="carousel fade">
+                <div class="card">
+                    <a href="pdfs/Isaak Maldonado - _A Sound of Thunder__ Three Literary Response Paragraphs.pdf" target="_blank"><img src="imgs/literaryResponseSnip.PNG" alt="A Sound of Thunder Literary Response"></a>
+                    <div class="caption">"A Sound of Thunder": Literary Response</div>
+                </div>
+                <div class="card">
+                    <a href="pdfs/Isaak Maldonado - _A Sound of Thunder__ Three Literary Response Paragraphs.pdf" target="_blank"><img src="imgs/literaryResponseSnip2.png" alt="A Sound of Thunder Literary Response"></a>
+                    <div class="caption">"A Sound of Thunder": Literary Response</div>
+                </div>
+                <div class="card">
+                    <img src="imgs/literaryResponseDocsInterface.png" alt="Google Docs Interface">
+                    <div class="caption">Google Docs Interface</div>
+                </div>
+                <a class="backward" onclick="add(-1)">&#10094;</a>
+                <a class="forward" onclick="add(1)">&#10095;</a>
+            </div>
+            <div style="text-align:center">
+                <span class="circle" onclick="current(1)"></span>
+                <span class="circle" onclick="current(2)"></span>
+                <span class="circle" onclick="current(3)"></span>
+            </div>
         </div>
         <h6>Click images to open site</h6>
-        <a href="pdfs/Isaak Maldonado - _A Sound of Thunder__ Three Literary Response Paragraphs.pdf" target="_blank"><img src="" alt="A Sound of Thunder Literary Response"></a>
         <!--Text-->
         <p>
             &emsp;&nbsp;After writing many essays and answering many questions for prompts for other classes including English, one of the pieces that I feel would be suitable for display would be the Literary Responses for questions that my teacher assigned to us. The questions were based on “A Sound of Thunder” by Ray Bradbury. During writing my responses to the text I experienced many challenges that I had to overcome and I also had to critically analyze the questions many times to come up with a response.<br><br>
@@ -63,7 +82,7 @@
         </p>
     </main>
     <footer>
-        <a class="active" href="index.html">Isaak Maldonado</a>
+        <a href="index.html">Isaak Maldonado</a>
         <a href="aboutMe.html">About Me</a>
         <a href="resume.html">Resume</a>
         <a href="aboutSpark.html">Adobe Spark</a>
@@ -72,7 +91,7 @@
         <a href="tourism.html">Tourism Website</a>
         <a href="paranova.html">Interactive Story: Paranova</a>
         <a href="escapism.html"><i>Ready Player One</i>: Escapism</a>
-        <a href="literaryResponse.html">Literary Response</a>
+        <a class="activeLink" href="literaryResponse.html">Literary Response</a>
         <a href="contact.html">Contact</a>
         <p class="footerText">Feel free to contact me:
             <br>Email: i.z.maldonado.2851@gmail.com

@@ -1,18 +1,17 @@
 //Contact validation form
 function formValidation()  {
-    let email = document.getElementsByName("emailAddress").value;
-    const emailStr = String(email);
-    let phone = document.getElementsByName("phoneNumber").value;
-    const phoneStr = String(phone);
-    if ((emailStr.indexOf('@') === -1) && (phoneStr.length < 8)) {
-        alert("Not a valid e-mail address and phone number is too short (less than 9 characters)");
-        document.write(email)
+    const email = document.getElementById("emailAddress").value;
+    let emailStr = String(email);
+    const phone = document.getElementById("phoneNumber").value;
+    let phoneStr = String(phone);
+    if ((emailStr.indexOf('@') === -1) && (phoneStr.length < 10)) {
+        alert("Not a valid e-mail address and phone number is too short (less than 10 characters)");
         return false;
     } else if (emailStr.indexOf('@') === -1) {
         alert("Not a valid e-mail address!");
         return false;
-    } else if (phoneStr.length < 8) {
-        alert("Phone number is too short (less than 9 characters)");
+    } else if (phoneStr.length < 10) {
+        alert("Phone number is too short (less than 10 characters)");
         return false;
     } else {
         return true;
@@ -27,4 +26,31 @@ function burgerMenu() {
         fullPageLinks.style.display = 'flex';//styling for the look and functionality of the page links
         fullPageLinks.style.flexDirection = 'column';
     }
+}
+//carousel
+function carouselDemo(n) {
+    var i;
+    var slide = document.getElementsByClassName("card");
+    var circles = document.getElementsByClassName("circle");
+    if (n > slide.length) {
+        pos = 1;
+    }
+    if (n < 1) {
+        pos = slide.length
+    }
+    for (i = 0; i < slide.length; i++) {
+        slide[i].style.display = "none";
+    }
+    for (i = 0; i < circles.length; i++) {
+        circles[i].className = circles[i].className.replace(" on", "");
+    }
+    const slideStyle = "block";
+    slide[pos - 1].style.display = slideStyle;
+    circles[pos - 1].className += " on";
+}
+function add(n) {
+    carouselDemo(pos += n);
+}
+function current(n) {
+    carouselDemo(pos = n);
 }

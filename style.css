@@ -80,21 +80,97 @@ header {
 .portfolioLinks {
     display: none;
 }
-.active {
+.activeLink {
     text-decoration: underline;
 }
 main {
     margin-left: 5%;
     margin-right: 5%;
 }
-#carousel {
+.fullCarousel {
+    width: fit-content;
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+}
+.carousel {
+    position: relative;
+    max-width: fit-content;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
 }
 img {
-    width: 50vw;
-    height: 30vh;
-    object-fit: contain;
+    width: 60vw;
+    height: 40vh;
+    object-fit: cover;
+}
+.card {
+    display: none;
+}
+.backward, .forward {
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    top: 40%;
+    padding: 1vw;
+    color: rgb(255, 255, 255); 
+    mix-blend-mode: difference;
+    font-size: x-large;
+    transition: 0.5s ease;
+    user-select: none;
+}
+.forward {
+    right: 0;
+}
+.backward:hover, .forward:hover {
+    color: #bababa;
+    font-size: xx-large;
+}
+.caption {
+    color: white;
+    font-size: medium;
+    position: absolute;
+    bottom: 1vw;
+    width: 100%;
+    text-align: center;
+    color: rgb(255, 255, 255); 
+    mix-blend-mode: difference;
+}
+.circle {
+    cursor: pointer;
+    height: 1vh;
+    width: 1vh;
+    margin: 0 0.25vh;
+    background-color: #bababa;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.5s ease;
+}
+.on, .circle:hover {
+    background-color: #676767;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: .5;
+    }
+    to {
+        opacity: 2;
+    }
+}
+@keyframes fade {
+    from {
+        opacity: .5;
+    }
+    to {
+        opacity: 2;
+    }
 }
 .topResume {
     display: flex;
@@ -105,6 +181,36 @@ img {
 }
 .topResumeRight{
     flex-direction: column;
+}
+form {
+    background-color: #67819A;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    border-radius: 2%;
+}
+form input:not([name="name"]) {
+    margin-top: 1%;
+}
+form input {
+    font-size: medium;
+}
+form input[name="message"] {
+    height: 15em;
+    margin-top: 1%;
+    font-size: medium;
+}
+form input[name="submit"] {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    color: black;
+
+}
+form input[name="submit"]:hover {
+    background-color: #bababa;
+    color: white;
 }
 footer {
     width: 100vw;
